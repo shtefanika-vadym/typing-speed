@@ -1,0 +1,63 @@
+@mixin device($breakpoint) {
+  //the name of the mixin is devices
+
+  @if $breakpoint == extraSmall {
+    @media only screen and (max-width: 500px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == extraMediumSmall {
+    @media only screen and (max-width: 580px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == smallOnly {
+    @media only screen and (max-width: 779px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mediumOnly {
+    @media only screen and (min-width: 780px) and (max-width: 1199px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == extraSmallUp {
+    @media only screen and (min-width: 442px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mediumSmallUpOnly {
+    @media only screen and (min-width: 590px) and (max-width: 1000px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mediumUp {
+    @media only screen and (min-width: 780px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == largeUp {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == largeUpPlus {
+    @media only screen and (min-width: 1240px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == extraLargeUp {
+    @media only screen and (min-width: 1300px) {
+      @content;
+    }
+  }
+}
